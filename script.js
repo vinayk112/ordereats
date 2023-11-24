@@ -35,7 +35,7 @@ function redirectToWhatsApp() {
     const message = `Order Summary:${cart.map(item => `${item.name} - ₹${item.price}`).join('%0A')}%0ATotal: ₹${cart.reduce((acc, item) => acc + item.price, 0).toFixed(2)}`;
 
     // Replace '1234567890' with the actual phone number you want to send the message to
-    const phoneNumber = '9389239324';
+    const phoneNumber = '7457813101';
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
