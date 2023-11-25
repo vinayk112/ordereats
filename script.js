@@ -32,16 +32,25 @@ function displayCart() {
 }
 
 function redirectToWhatsApp() {
-    const message = `Order Summary:${cart.map(item => `${item.name} - ₹${item.price}`).join('%0A')}%0ATotal: ₹${cart.reduce((acc, item) => acc + item.price, 0).toFixed(2)}`;
+    // Step 1: Construct the order summary message
+    const orderSummary = cart.map(item => `${item.name} - ₹${item.price}`).join('%0A');
+    
+    // Step 2: Calculate the total price
+    const total = cart.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
-    // Replace '1234567890' with the actual phone number you want to send the message to
+    // Step 3: Create the complete message with order summary and total
+    const message = `Order Summary:%0A${orderSummary}%0ATotal: ₹${total}`;
+
+    // Step 4: Replace '7457813101' with the actual phone number
     const phoneNumber = '7457813101';
 
+    // Step 5: Create the WhatsApp link with the message and phone number
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-    // Open a new window or tab to redirect to WhatsApp
+    // Step 6: Open a new window or tab to redirect to WhatsApp
     window.open(whatsappLink, '_blank');
 }
 
 // Example of how to call redirectToWhatsApp on button click
 document.getElementById('checkout-button').addEventListener('click', redirectToWhatsApp);
+
