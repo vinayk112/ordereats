@@ -33,13 +33,25 @@ function displayCart() {
 
 function redirectToWhatsApp() {
     // Step 1: Construct the order summary message
-    const orderSummary = cart.map(item => `${item.name} - ₹${item.price}`).join('%0A');
-    
+    const orderSummary = cart.map(item => `${item.name} - ₹${item.price}`).join('\n');
+
     // Step 2: Calculate the total price
     const total = cart.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
     // Step 3: Create the complete message with order summary and total
-    const message = `Order Summary:%0A${orderSummary}%0ATotal: ₹${total}`;
+    const message = `
+
+Order Summary: 
+-x-x-x-x--x-x-x-x-x
+
+${orderSummary}
+
+-x-x-x-x-x-x-x-x--x
+
+Total: ₹${total}
+
+with ❤️ created by OrderEats
+`;
 
     // Step 4: Replace '7457813101' with the actual phone number
     const phoneNumber = '7457813101';
