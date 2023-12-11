@@ -1,76 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Food Ordering Service</title>
 </head>
+
 <body>
     <header>
-        <h1>ORDER EATS </h1>
-        <h2>Canteen  </h2>
+        <h1>ⓞⓡⓓⓔⓡ ⓔⓐⓣⓢ
+        </h1>
+        <h2>🄲 🄰 🄽 🅃 🄴 🄴 🄽
+            <!-- Add this code within the <body> tag, before the <header> section -->
+            <div id="shopping-cart">
+                <img src="images/cart.jpg" alt="Shopping Cart Icon" id="cart-icon">
+                <span id="cart-count">0</span>
+            </div>
+
     </header>
-    
+
     <section id="menu">
         <h2>Menu (ORDER HERE)</h2>
+
         <div class="item">
+            <img src="images/pizza.jpg" alt="Pizza Image" class="item-image">
             <span class="item-name">PIZZA</span>
             <span class="item-price">₹120</span>
-            <button class="add-to-cart" id="addToCartPizza" onclick="addToCart('PIZZA', 120, 'addToCartPizza')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartPizza" onclick="addToCart('PIZZA', 120, 'addToCartPizza')">Add to
+                Cart</button>
 
         </div>
         <div class="item">
+            <img src="images/pasta.jpg" alt="pasta Image" class="item-image">
             <span class="item-name">PAASTA</span>
             <span class="item-price">₹70</span>
-            <button class="add-to-cart" id="addToCartPAASTA" onclick="addToCart('PAASTA', 70, 'addToCartPAASTA')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartPAASTA" onclick="addToCart('PAASTA', 70, 'addToCartPAASTA')">Add to
+                Cart</button>
         </div>
         <div class="item">
+            <img src="images/maggi.jpg" alt="Maggie Image" class="item-image">
             <span class="item-name">MAGGI</span>
             <span class="item-price">₹60</span>
-            <button class="add-to-cart" id="addToCartMAGGI" onclick="addToCart('MAGGI', 60, 'addToCartMAGGI')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartMAGGI" onclick="addToCart('MAGGI', 60, 'addToCartMAGGI')">Add to
+                Cart</button>
         </div>
         <div class="item">
+            <img src="images/noodles.jpg" alt="NOODLES Image" class="item-image">
             <span class="item-name">NOODLES</span>
             <span class="item-price">₹60</span>
-            <button class="add-to-cart" id="addToCartNOODLES" onclick="addToCart('NOODLES', 60, 'addToCartNOODLES')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartNOODLES" onclick="addToCart('NOODLES', 60, 'addToCartNOODLES')">Add
+                to Cart</button>
         </div>
         <div class="item">
+            <img src="images/samosa.jpg" alt="SAMOSA Image" class="item-image">
+
             <span class="item-name">SAMOSA</span>
             <span class="item-price">₹12</span>
-            <button class="add-to-cart" id="addToCartSAMOSA" onclick="addToCart('SAMOSA', 12, 'addToCartSAMOSA')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartSAMOSA" onclick="addToCart('SAMOSA', 12, 'addToCartSAMOSA')">Add to
+                Cart</button>
         </div>
         <div class="item">
+            <img src="images/bread pakoda.jpg" alt="Bread Pakoda" class="item-image">
+
             <span class="item-name">BREAD PAKODA</span>
             <span class="item-price">₹15</span>
-            <button class="add-to-cart" id="addToCartBREAD PAKODA" onclick="addToCart('BREAD PAKODA', 15, 'addToCartBREAD PAKODA')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartBREAD PAKODA"
+                onclick="addToCart('BREAD PAKODA', 15, 'addToCartBREAD PAKODA')">Add to Cart</button>
         </div>
         <div class="item">
+            <img src="images/patties.jpg" alt="Patties Image" class="item-image">
+
             <span class="item-name">PATTIES</span>
             <span class="item-price">₹25</span>
-            <button class="add-to-cart" id="addToCartPATTIES" onclick="addToCart('PATTIES', 25 , 'addToCartPATTIES')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartPATTIES"
+                onclick="addToCart('PATTIES', 25 , 'addToCartPATTIES')">Add to Cart</button>
         </div>
         <div class="item">
+            <img src="/images/aalo paratha.jpg" alt="Allo Paratha" class="item-image">
+
             <span class="item-name">ALOO PARATHA</span>
             <span class="item-price">₹40</span>
-            <button class="add-to-cart" id="addToCartALOO PARATHA" onclick="addToCart('ALOO PARATHA', 40, 'addToCartALOO PARATHA')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartALOO PARATHA"
+                onclick="addToCart('ALOO PARATHA', 40, 'addToCartALOO PARATHA')">Add to Cart</button>
         </div>
         <div class="item">
+            <img src="/images/momos.jpg" alt="Momos Image" class="item-image">
+
             <span class="item-name">MOMOS</span>
             <span class="item-price">₹50</span>
-            <button class="add-to-cart" id="addToCartMOMOS" onclick="addToCart('MOMOS', 50, 'addToCartMOMOS')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartMOMOS" onclick="addToCart('MOMOS', 50, 'addToCartMOMOS')">Add to
+                Cart</button>
         </div>
         <div class="item">
+            <img src="images/chilli potato.jpg" alt="Chili Potato Image" class="item-image">
+
             <span class="item-name">CHILLI POTATO</span>
             <span class="item-price">₹70</span>
-            <button class="add-to-cart" id="addToCartCHILLI POTATO" onclick="addToCart('CHILLI POTATO', 70, 'addToCartCHILLI POTATO')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartCHILLI POTATO"
+                onclick="addToCart('CHILLI POTATO', 70, 'addToCartCHILLI POTATO')">Add to Cart</button>
         </div>
         <div class="item">
+            <img src="/images/chips.jpg" alt="Chips Image" class="item-image">
+
             <span class="item-name">CHIPS</span>
             <span class="item-price">₹10</span>
-            <button class="add-to-cart" id="addToCartCHIPS" onclick="addToCart('CHIPS', 10, 'addToCartCHIPS')">Add to Cart</button>
+            <button class="add-to-cart" id="addToCartCHIPS" onclick="addToCart('CHIPS', 10, 'addToCartCHIPS')">Add to
+                Cart</button>
         </div>
     </section>
+
 
     <section id="cart">
         <h2>Shopping Cart</h2>
@@ -84,4 +124,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
