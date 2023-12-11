@@ -28,6 +28,7 @@ function addToCart(itemName, itemPrice, buttonId) {
   displayCart();
 }
 
+
 function displayCart() {
   const cartItems = document.getElementById("cart-items");
   const totalElement = document.getElementById("total");
